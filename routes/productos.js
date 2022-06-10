@@ -1,6 +1,21 @@
 const enrutador = require('express').Router();
 
-let productosList = [];
+let productosList = [
+    { id:1 ,
+      title:'pocion magica',
+      price:5 ,
+      thumbnail:'https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Potion-128.png' },
+    { id:2 ,
+      title:'espada',
+      price:15 ,
+      thumbnail: 'https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Sword-128.png'
+    },
+    { id:3 ,
+      title:'unicornio',
+      price:35 ,
+      thumbnail:'https://cdn3.iconfinder.com/data/icons/fantasy-and-role-play-game-adventure-quest/512/Unicorn-128.png' 
+    }
+];
 
 enrutador.get('/productos', ( req , resp ) =>{
     resp.json(productosList);
